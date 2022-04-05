@@ -48,7 +48,7 @@
                     <i id="more-music" class="material-icons-round">queue_music</i>
                 </div>
             </div>
-            <div class="music-list">
+            <div class="music-list" id="music-list">
                 <div class="music-list__headline">
                     <p>Music list</p>
                     <i id="close" class="material-icons-round">close</i>
@@ -194,6 +194,16 @@
             </div>
         </div>
     </div>
+    <script>
+        var openList = document.getElementById('more-music')
+        var closeList = document.getElementById('close')
+        openList.addEventListener('click', function() {
+            document.getElementById('music-list').classList.add('active')
+        })
+        closeList.addEventListener('click', function() {
+            document.getElementById('music-list').classList.remove('active')
+        })
+    </script>
 </body>
 
 </html>

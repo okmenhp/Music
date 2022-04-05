@@ -229,6 +229,22 @@ body {
     font-size: 10px;
 }
 
+.music-list {
+    opacity: 0;
+    visibility: hidden;
+    height: 0%;
+    position: absolute;
+    /* bottom: 0; */
+    transition: .5s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+    height: 65%;
+    transition: .4s ease-in-out;
+}
+
 .music-list__headline {
     display: flex;
     align-items: center;
