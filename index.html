@@ -195,10 +195,13 @@
         </div>
     </div>
     <script>
-        var musicList = document.getElementById('more-music')
-        musicList.addEventListener('click', function() {
-            document.getElementById('music-list').classList.toggle('active')
-            console.log(123)
+        var openList = document.getElementById('more-music')
+        var closeList = document.getElementById('close')
+        openList.addEventListener('click', function() {
+            document.getElementById('music-list').classList.add('active')
+        })
+        closeList.addEventListener('click', function() {
+            document.getElementById('music-list').classList.remove('active')
         })
     </script>
 </body>

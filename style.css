@@ -230,18 +230,19 @@ body {
 }
 
 .music-list {
-    border-radius: 20px 20px 20px 20px;
-    background-color: #ffffff;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s ease-out;
+    height: 0%;
+    position: absolute;
+    /* bottom: 0; */
+    transition: .5s ease-in-out;
 }
 
 .active {
-    display: flex;
-    visibility: visible;
     opacity: 1;
-    transition: all .3s ease-out;
+    visibility: visible;
+    height: 65%;
+    transition: .4s ease-in-out;
 }
 
 .music-list__headline {
