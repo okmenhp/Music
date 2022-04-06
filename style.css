@@ -15,6 +15,26 @@ body {
     background: #cedafe;
 }
 
+body::-webkit-scrollbar {
+    background: transparent;
+    width: 0px;
+}
+
+i {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently */
+}
+
 .music {
     position: relative;
     width: 300px;
@@ -98,18 +118,19 @@ body {
 .progress-area {
     height: 6px;
     width: 100%;
-    /* box-shadow: -3px -3px 5px #FFFFFF, 3px 3px 5px rgba(0, 0, 0, 0.05), inset 3px 3px 5px rgba(0, 0, 0, 0.05), inset -3px -3px 5px #FFFFFF; */
     border-radius: 37px;
     cursor: pointer;
     background-color: #e6e7eb;
 }
 
 .progress-bar {
+    /* width: 300px; */
+    /* left: 0; */
     position: relative;
     height: inherit;
-    width: 50%;
     border-radius: inherit;
-    background: #809ff1
+    width: 0%;
+    background-color: #105efb;
 }
 
 .progress-bar::before {
@@ -131,6 +152,9 @@ body {
 
 .time {
     padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .time span {
@@ -167,7 +191,6 @@ body {
     flex-direction: column;
     padding: 0 10px;
     border-radius: 20px;
-    /* overflow-y: scroll; */
 }
 
 .music-list-wrapper {
@@ -186,6 +209,7 @@ body {
     padding: 10px 0;
     border-bottom: 0.5px solid #e6e7eb;
     z-index: -1;
+    cursor: pointer;
 }
 
 .song:last-child {
@@ -200,12 +224,14 @@ body {
 
 .song i {
     font-size: 20px;
-    color: #105efb;
+    /* color: #105efb; */
+    color: #858c9a;
 }
 
 .song-content {
     display: flex;
-    padding-right: 60px;
+    width: 200px;
+    margin-right: 20px;
 }
 
 .song-content img {
@@ -220,7 +246,7 @@ body {
     color: #4f5a6e;
 }
 
-.song-content__sing p {
+.song-content__artist p {
     font-size: 10px;
     color: #858c9a;
 }
@@ -241,7 +267,7 @@ body {
 .active {
     opacity: 1;
     visibility: visible;
-    height: 65%;
+    height: 60%;
     transition: .4s ease-in-out;
 }
 
