@@ -12,7 +12,7 @@
 
 <body>
     <div class="music-box">
-        <div class="music">
+        <div class="music" id="music">
             <div class="music-image">
                 <img src="./img/MyTam.jpg" alt="">
             </div>
@@ -48,7 +48,7 @@
                     <i id="more-music" class="material-icons-round">queue_music</i>
                 </div>
             </div>
-            <div class="music-list">
+            <div class="music-list" id="music-list">
                 <div class="music-list__headline">
                     <p>Music list</p>
                     <i id="close" class="material-icons-round">close</i>
@@ -194,6 +194,13 @@
             </div>
         </div>
     </div>
+    <script>
+        var musicList = document.getElementById('more-music')
+        musicList.addEventListener('click', function() {
+            document.getElementById('music-list').classList.toggle('active')
+            console.log(123)
+        })
+    </script>
 </body>
 
 </html>
